@@ -1,0 +1,34 @@
+.container {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin-left: 10px;
+  gap: 8px;
+}
+
+.btn {
+  height: 35px;
+  border: 1px solid black;
+  margin-right: 10px;
+  font-weight: normal;
+  background-color: rgb(219, 219, 219);
+}
+
+p {
+  margin: 5px;
+}

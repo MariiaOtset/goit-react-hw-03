@@ -1,0 +1,10 @@
+.searchWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.search {
+  width: 220px;
+}
