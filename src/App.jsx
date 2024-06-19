@@ -12,13 +12,19 @@ function App() {
     { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
   ]);
 
+  const [filter, setFilter] = useState("");
+
   const deleteContact = (contactId) => {
     setContacts((prevContacts) => {
       return prevContacts.filter((contact) => contact.id !== contactId);
     });
   };
 
-  const [filter, setFilter] = useState("");
+  const addContact = (newContact) => {
+    setContacts((prevContacts) => {
+      return [...prevContacts, newContact];
+    });
+  };
 
   const filteredContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
@@ -27,7 +33,7 @@ function App() {
   return (
     <>
       <h1>Phonebook</h1>
-      <ContactForm />
+      <ContactForm onAdd={addContact} />
       <SearchBox value={filter} onFilter={setFilter} />
       <ContactList contacts={filteredContacts} onDelete={deleteContact} />
     </>
