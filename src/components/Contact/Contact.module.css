@@ -2,10 +2,11 @@
   border: 2px solid black;
   border-radius: 4px;
   margin-bottom: 10px;
-  width: 250px;
+  width: 275px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #f9f9f9;
 }
 
 .info {
@@ -25,10 +26,14 @@
   height: 35px;
   border: 1px solid black;
   margin-right: 10px;
-  font-weight: normal;
-  background-color: rgb(219, 219, 219);
+  font-weight: bold;
+  background-color: rgb(255, 83, 83);
 }
 
 p {
   margin: 5px;
+}
+
+ul {
+  padding-inline-start: 0px;
 }

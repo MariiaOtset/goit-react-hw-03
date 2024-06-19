@@ -1,4 +1,4 @@
-// import css from "./ContactForm.module.css";
+import css from "./ContactForm.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { nanoid } from "nanoid";
 import { useId } from "react";
@@ -10,7 +10,7 @@ const initialValues = {
 };
 
 const FeedbackSchema = Yup.object().shape({
-  name: Yup.toString()
+  name: Yup.string()
     .min(3, "Too short!")
     .max(50, "Too long!")
     .required("Name is required!"),
@@ -41,12 +41,12 @@ const ContactForm = ({ onAdd }) => {
         onSubmit={handleSubmit}
         validationSchema={FeedbackSchema}
       >
-        <Form>
+        <Form className={css.form}>
           <label htmlFor={nameField}>Name</label>
-          <Field name="name" id={nameField} />
+          <Field className={css.input} name="name" id={nameField} />
           <ErrorMessage name="name" />
           <label htmlFor={numberField}>Number</label>
-          <Field name="number" id={numberField} />
+          <Field className={css.input} name="number" id={numberField} />
           <ErrorMessage name="number" component="span" />
           <button type="submit">Add contact</button>
         </Form>
